@@ -1,0 +1,51 @@
+{
+  "name": "worksite-billing-lnl",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@aws-amplify/auth": "^5.1.2",
+    "@aws-amplify/core": "^5.0.8",
+    "@mdi/font": "^7.4.47",
+    "@vue-youtube/core": "^0.0.6",
+    "aws-amplify": "^5.3.29",
+    "axios": "^1.13.5",
+    "date-fns": "^4.1.0",
+    "dateformat": "^5.0.3",
+    "fast-xml-parser": "^5.4.1",
+    "jspdf": "^4.2.0",
+    "jspdf-autotable": "^5.0.7",
+    "lodash": "^4.17.23",
+    "minimatch": "^10.2.4",
+    "qs": "^6.15.0",
+    "rollup": "^4.59.0",
+    "sass": "^1.97.2",
+    "v-mask": "^2.3.0",
+    "vite-plugin-vuetify": "^2.1.2",
+    "vue": "^3.5.26",
+    "vue-router": "^4.6.4",
+    "vue3-cookies": "^1.0.6",
+    "vue3-youtube": "^0.1.9",
+    "vuetify": "^3.11.6",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
+    "material-design-icons-iconfont": "^6.7.0",
+    "unplugin-vue-components": "^31.0.0",
+    "unplugin-vue-router": "^0.19.2",
+    "vite": "^7.3.0",
+    "vite-plugin-vue-devtools": "^8.0.5"
+  },
+  "overrides": {
+    "fast-xml-parser": "^5.4.1"
+  }
+}

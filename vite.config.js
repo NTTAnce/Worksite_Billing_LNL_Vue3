@@ -1,0 +1,65 @@
+// Plugins
+import Components from 'unplugin-vue-components/vite'
+import Vue from '@vitejs/plugin-vue'
+import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+//import Fonts from 'unplugin-fonts/vite'
+import VueRouter from 'unplugin-vue-router/vite'
+
+// Utilities
+import { defineConfig } from 'vite'
+import { fileURLToPath, URL } from 'node:url'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    VueRouter(),
+    Vue({
+      template: { transformAssetUrls },
+    }),
+    // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
+    Vuetify({
+      autoImport: true,
+      styles: {
+        configFile: 'src/styles/global.css',
+      },
+    }),
+    Components()    
+  ],
+  optimizeDeps: {
+    exclude: [
+      'vuetify',
+      'vue-router',
+      'unplugin-vue-router/runtime',
+      'unplugin-vue-router/data-loaders',
+      'unplugin-vue-router/data-loaders/basic',
+    ],
+  },
+  define: { 'process.env': {},global: 'window', },
+  
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('src', import.meta.url)),
+    },
+    extensions: [
+      '.js',
+      '.json',
+      '.jsx',
+      '.mjs',
+      '.ts',
+      '.tsx',
+      '.vue',
+    ],
+  },
+  build: {
+
+   /** If you set esmExternals to true, this plugins assumes that 
+     all external dependencies are ES modules */
+
+   commonjsOptions: {
+      esmExternals: true 
+   },
+},
+  server: {
+    port: 3000,
+  },
+})

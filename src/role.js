@@ -1,0 +1,64 @@
+export const Role = {
+  HomeOfficeUser: "HomeOfficeUser",
+  HomeOfficeAdmin: "HomeOfficeAdmin",
+  AgencyUser: "AgencyUser",
+  FranchiseUser: "User",
+  FranchiseAdmin: "Admin"
+};
+
+/*
+
+SELECt UIRoleName, RolePermissionProcess
+  FROM [WorksiteBillingNT].[dbo].[wsb2_RolePermission] rp, WorksiteBillingNT.dbo.wsb2_RolePermissionProcess rpp
+  where rpp.RolePermissionProcessId = rp.RolePermissionProcessKey
+  order by RolePermissionProcess
+
+UIRoleName	RolePermissionProcess
+AcctContactInfoRead	Account_Information
+AcctBankInfoRead	Account_Information
+AcctContactInfoUpdate	Account_Information
+AcctBankInfoUpdate	Account_Information
+AcctContactInfoUpdDel	Account_Information
+AcctBankInfoUpdDel	Account_Information
+CompanyAssocRead	Company_Franchise_Setup
+CompanyAssocUpdate	Company_Franchise_Setup
+CompanyAssocUpdDel	Company_Franchise_Setup
+HORegistrationReqUpdate	HO_Admin
+HORegistrationAssocUpdate	HO_Admin
+HORegistrationAssocUpdDel	HO_Admin
+HOSettingsRead	HO_Admin
+InvoiceRead	Invoice_History
+InvoiceUpdate	Invoice_History
+InvoiceUpdDel	Invoice_History
+ReconcileAdjRead	Reconcile_And_Pay
+ReconcileReviewRead	Reconcile_And_Pay
+ReconcilePayRead	Reconcile_And_Pay
+ReconcileAdjUpdate	Reconcile_And_Pay
+ReconcileReviewUpdate	Reconcile_And_Pay
+ReconcilePayUpdate	Reconcile_And_Pay
+ReconcileAdjUpdDel	Reconcile_And_Pay
+ReconcileReviewUpdDel	Reconcile_And_Pay
+ReconcilePayUpdDel	Reconcile_And_Pay
+RegistrationReqRead	Registration
+RegistrationAssocRead	Registration
+RegistrationReqUpdate	Registration
+RegistrationAssocUpdate	Registration
+RegistrationReqUpdDel	Registration
+RegistrationAssocUpdDel	Registration
+IssuesLogRead	System_Tools
+PINCalcRead	System_Tools
+PINCalcUpdate	System_Tools
+SysInvoiceMaintRead	System_Tools
+SysInvoiceMaintUpdDel	System_Tools
+PINCalcUpdDel	System_Tools
+UserCreateRead	User_And_Roles
+UserMaintenanceRead	User_And_Roles
+UserPasswordRead	User_And_Roles
+UserCreateUpdate	User_And_Roles
+UserMaintenanceUpdate	User_And_Roles
+UserPasswordUpdate	User_And_Roles
+UserCreateUpdDel	User_And_Roles
+UserMaintenanceUpdDel	User_And_Roles
+UserPasswordUpdDel	User_And_Roles
+UserPasswordUpdateOnly	User_And_Roles
+*/
